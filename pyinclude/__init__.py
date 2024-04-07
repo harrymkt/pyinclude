@@ -2,11 +2,13 @@ import ctypes
 import inflect
 from .import math, date, file
 def messagebox(title, message):
+#This function displays message box on the user's screen.
 	user32 = ctypes.windll.user32
 	user32.MessageBoxA(0, message.encode("utf-8"), title.encode("utf-8"), 0x00000050)
 
 
 def number_to_words(numbers, include_and=False):
+#number_to_words converter.
 	p = inflect.engine()
 	words = p.number_to_words(numbers)
 	if not include_and:

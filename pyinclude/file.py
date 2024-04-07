@@ -2,16 +2,17 @@ import os
 
 def get_contents(fn, mode="r"):
 	try:
-		d=open(fn, mode)
-		return d.read()
+		with open(fn, mode) as d:
+			return d.read()
 	except:
 		return ""
 
-def put_contents(fn, content, mode="r"):
+def put_contents(fn, content, mode="w", overwrite=True):
+	if not overwrite and exists(fn): return False
 	try:
-		f=open(fn, mode)
-		f.write(content)
-		return True
+		with open(fn, mode) as f:
+			f.write(content)
+			return True
 	except:
 		return False
 

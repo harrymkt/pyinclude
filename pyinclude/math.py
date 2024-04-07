@@ -5,6 +5,7 @@ def random(minimum,maximum,rounded=False,number_of_rounding=0):
 
 	final=-1
 	final=random.randrange(minimum,maximum)
+	if rounded: final=round(final,number_of_rounding)
 	return final
 
 def convert_size(size, round_to=2):
