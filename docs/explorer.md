@@ -1,7 +1,7 @@
 # Functions
 
 ```
-import pyinclude.file as fileobj
+import pyinclude.explorer as fileobj
 ```
 
 ## `get_contents(fn, mode="r")`
