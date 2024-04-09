@@ -23,3 +23,13 @@ def myfunct()
 ## Comments
 
 Comments should be provided where needed.
+
+You can use either single or multiline comment.
+
+```
+# single comment
+"""
+multi
+comment
+"""
+```

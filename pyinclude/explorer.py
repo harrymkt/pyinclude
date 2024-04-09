@@ -1,34 +1,84 @@
 import os
+import wx
+class filemgr:
+	@staticmethod
+	def get_contents(fn, mode="r"):
+		try:
+			with open(fn, mode) as d:
+				return d.read()
+		except:
+			return ""
 
-def get_contents(fn, mode="r"):
-	try:
-		with open(fn, mode) as d:
-			return d.read()
-	except:
-		return ""
+	@staticmethod
+	def put_contents(fn, content, mode="w", overwrite=True):
+		if not overwrite and os.path.exists(fn):
+			return False
+		try:
+			with open(fn, mode) as f:
+				f.write(content)
+				return True
+		except:
+			return False
 
-def put_contents(fn, content, mode="w", overwrite=True):
-	if not overwrite and exists(fn): return False
-	try:
-		with open(fn, mode) as f:
-			f.write(content)
+	@staticmethod
+	def exists(path):
+		return os.path.isfile(path)
+
+	@staticmethod
+	def delete(p):
+		if os.path.exists(p):
+			os.remove(p)
 			return True
-	except:
-		return False
+		else:
+			return False
 
-def exists(p):
-	return os.path.exists(p)
+	@staticmethod
+	def get_size(fn):
+		return os.path.getsize(fn)
 
-def delete(p):
-	if exists(p):
-		os.remove(p)
-		return True
-	else:
-		return False
+	@staticmethod
+	def search(dest):
+		files_list = []
+		try:
+			for f in os.listdir(dest):
+				if os.path.isfile(f):
+					files_list.append(f)
+			return files_list
+		except:
+			return []
 
-def get_size(fn):
-	return os.path.getsize(fn)
+class dirmgr:
+	@staticmethod
+	def create(path):
+		try:
+			os.mkdir(path)
+			return True
+		except:
+			return False
 
+	@staticmethod
+	def delete(path):
+		try:
+			os.rmdir(path)
+			return True
+		except:
+			return False
+
+	@staticmethod
+	def exists(path):
+		return os.path.isdir(path)
+
+	@staticmethod
+	def search(dest):
+		dirs_list = []
+		try:
+			for f in os.listdir(dest):
+				if os.path.isdir(f):
+					dirs_list.append(f)
+			return dirs_list
+		except:
+			return []
+#other
 def select_file(title="Choose File", wildcard="All files (*.*)|*.*", multi=False):
 	app = wx.App(False)  # Create wx.App object
 	style = wx.FD_OPEN | wx.FD_FILE_MUST_EXIST
