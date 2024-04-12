@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
-# Read the requirements from requirements.txt
-with open("requirements.txt") as f:
-	requirements = f.read().splitlines()
-
+requirements=[
+	"inflect",
+	"wxpython"
+	]
 setup(
 	name="pyinclude",
-	version="0.1",
+	version="0.5",
 	packages=find_packages(),
 	install_requires=requirements,
 	author="Harry Min Khant",
