@@ -6,7 +6,7 @@ requirements=[
 	]
 setup(
 	name="pyinclude",
-	version="0.5",
+	version="0.6",
 	packages=find_packages(),
 	install_requires=requirements,
 	author="Harry Min Khant",

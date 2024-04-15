@@ -10,7 +10,7 @@ def random(minimum,maximum,rounded=False,number_of_rounding=0):
 
 def convert_size(size, round_to=2):
 
-	if size<1: return"0 B"
+	if size<1: return F"{round(0,round_to)} B"
 	if size<1024:
 
 		return F"{round(size,round_to)} B"

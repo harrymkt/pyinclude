@@ -2,6 +2,11 @@
 
 This is all the Python classes and functions which makes coding with python easyer.
 
+Use pip to install the most latest public release version.
+```
+pip install pyinclude
+```
+
 To use this, you will import
 ```
 import pyinclude as engine
