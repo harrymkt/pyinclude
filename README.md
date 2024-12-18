@@ -1,11 +1,5 @@
-# Python includeable package
-
-This is all the Python classes and functions which makes coding with python easyer.
-
-Use pip to install the most latest public release version.
-```
-pip install pyinclude
-```
+# Python Includeable Package
+This is all the Python classes and functions which makes coding with Python easyer.
 
 To use this, you will import
 ```
@@ -14,17 +8,12 @@ print(engine.convert_size(2481918))
 ```
 
 ## Contribution
-
 Contributions are welcome.
 
-## Issues
-
+### Issues
 You can report issues.
-
 [Join the issueboard!](https://github.com/harrymkt/pyinclude/issues)
 
-## Discussions
-
+### Discussions
 You can join the Discussions to get help and solve problems
-
 [Join the discussionboard!](https://github.com/harrymkt/pyinclude/discussions)

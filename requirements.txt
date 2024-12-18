@@ -1,2 +1,6 @@
 inflect
 wxpython
+setuptools
+wheel
+twine
+build
