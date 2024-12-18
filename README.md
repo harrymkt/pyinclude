@@ -1,5 +1,5 @@
 # Python Includeable Package
-This is all the Python classes and functions which makes coding with Python easyer.
+This is all the Python classes and functions which makes coding with Python easyer, for Windows.
 
 To use this, you will import
 ```

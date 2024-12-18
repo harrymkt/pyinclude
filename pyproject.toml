@@ -1,7 +1,7 @@
 [project]
   name = "pyinclude"
   version = "0.60.1"
-  description = "A collection of Python scripts to make it easyer"
+  description = "A collection of Python scripts to make it easyer, for Windows"
   dependencies = [
     "inflect",
     "wxpython"
